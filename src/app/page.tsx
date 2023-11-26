@@ -5,7 +5,7 @@ import Project from "./_components/Project";
 export default function Home() {
   return (
     <div className="flex w-full flex-col items-center px-4">
-      <div className="flex w-fit flex-col items-center pb-24 pt-52 text-center sm:pt-72 ">
+      <div className="flex w-fit flex-col items-center pb-24 pt-24 text-center sm:pt-72 ">
         <Image
           src={profile}
           alt="profile"
