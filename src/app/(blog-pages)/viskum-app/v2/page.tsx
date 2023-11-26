@@ -1,11 +1,5 @@
-import { fitnessHomePage } from "@/assets/viskum-app-v1";
 import { H1 } from "@/components/h1";
-import { H2 } from "@/components/h2";
-import { H3 } from "@/components/h3";
 import { P } from "@/components/p";
-import { cn } from "@/lib/utils";
-import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
-import Image from "next/image";
 
 export default function ViskumAppProjectPage() {
   const buttonTw =

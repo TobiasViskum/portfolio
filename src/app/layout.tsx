@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { HomeIcon } from "@/svg/HomeIcon";
 import { ThemeSwitcher } from "./_components/ThemeSwitcher";
+import { Sidebar } from "./(blog-pages)/_components/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,22 +24,15 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#FFFFFF" />
       </head>
-      <body className={cn(inter.className, "min-h-[100svh] dark:bg-black")}>
-        <ThemeSwitcher />
-        {/* <div className="group fixed left-0 flex h-full w- flex-col items-start justify-center gap-y-8 pl-2">
-          <div className="flex items-center gap-x-2">
-            <HomeIcon />
-            <p className="pb-2 text-lg font-medium opacity-0 group-hover:opacity-75">
-              Home
-            </p>
-          </div>
-        </div> */}
+      <body className={cn(inter.className, "min-h-[100svh]")}>
         <ThemeProvider
-          defaultTheme="light"
           attribute="class"
-          themes={["dark", "light"]}
+          defaultTheme="system"
+          enableSystem
           disableTransitionOnChange
         >
+          <ThemeSwitcher />
+          <Sidebar />
           {children}
         </ThemeProvider>
       </body>

@@ -8,7 +8,7 @@ const P = React.forwardRef<HTMLHeadingElement, InputProps>(
   ({ className, ...props }, ref) => {
     return (
       <p
-        className={cn("xs:text-sm text-xs text-blue-950", className)}
+        className={cn("xs:text-sm text-xs text-foreground", className)}
         ref={ref}
         {...props}
       />

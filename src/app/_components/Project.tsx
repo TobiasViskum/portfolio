@@ -11,12 +11,10 @@ export default function Project({
   return (
     <Link
       href={link}
-      className="group flex items-center justify-between rounded-xl border border-black border-opacity-30 bg-white px-8 py-6 font-medium underline-offset-2 transition-colors hover:bg-slate-50 focus-visible:bg-slate-50"
+      className="text-second hover:text-first focus-visible:text-first focus:text-first hover:bg-hover focus:bg-hover focus-visible:bg-hover group flex items-center justify-between rounded-xl border bg-background px-8 py-6 font-medium underline-offset-2 transition-colors"
     >
-      <p className="text-2xl text-blue-800 transition-all group-hover:text-blue-700 group-focus-visible:text-blue-700">
-        {text}
-      </p>
-      <ChevronRightIcon className="h-7 w-7 text-blue-800 transition-all group-hover:translate-x-2 group-hover:scale-110 group-hover:text-blue-700 group-focus-visible:translate-x-2 group-focus-visible:scale-110 group-focus-visible:text-blue-700" />
+      <p className="text-2xl transition-all">{text}</p>
+      <ChevronRightIcon className="group-hover:scale-110group-focus-visible:translate-x-2 h-7 w-7 transition-all group-hover:translate-x-2 group-focus-visible:scale-110" />
     </Link>
   );
 }

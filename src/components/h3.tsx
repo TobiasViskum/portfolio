@@ -9,7 +9,7 @@ const H3 = React.forwardRef<HTMLHeadingElement, InputProps>(
     return (
       <h3
         className={cn(
-          "xs:text-3xl text-2xl font-extrabold text-blue-900 md:text-4xl",
+          "xs:text-3xl text-second text-2xl font-extrabold md:text-4xl",
           className,
         )}
         ref={ref}
