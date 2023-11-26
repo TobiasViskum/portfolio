@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#FFFFFF" />
       </head>
       <body className={cn(inter.className, "min-h-[100svh] dark:bg-black")}>
         <ThemeSwitcher />
