@@ -92,4 +92,17 @@
   body {
     @apply bg-background text-foreground;
   }
+  .text-gradient {
+    --text-gradient: linear-gradient(
+      180deg,
+      rgb(59, 130, 246),
+      rgb(29, 78, 216)
+    );
+    /* --text-gradient: linear-gradient(180deg, #555, #000); */
+    background: var(--text-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @apply bg-blue-700;
+  }
 }
