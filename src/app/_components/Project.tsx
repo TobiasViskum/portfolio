@@ -1,10 +1,16 @@
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
-export default function Project({ text }: { text: string }) {
+export default function Project({
+  text,
+  link,
+}: {
+  text: string;
+  link: string;
+}) {
   return (
     <Link
-      href="/viskum-app"
+      href={link}
       className="group flex items-center justify-between rounded-xl border border-black border-opacity-30 bg-white px-8 py-6 font-medium underline-offset-2 transition-colors hover:bg-slate-50 focus-visible:bg-slate-50"
     >
       <p className="text-2xl text-blue-800 transition-all group-hover:text-blue-700 group-focus-visible:text-blue-700">

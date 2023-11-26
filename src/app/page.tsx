@@ -4,7 +4,7 @@ import Project from "./_components/Project";
 
 export default function Home() {
   return (
-    <div className="flex w-full flex-col items-center">
+    <div className="flex w-full flex-col items-center px-4">
       <div className="flex w-fit flex-col items-center pb-24 pt-52 text-center sm:pt-72 ">
         <Image
           src={profile}
@@ -21,7 +21,7 @@ export default function Home() {
       <div className="flex w-full flex-col items-center space-y-8">
         <div className="w-full sm:w-[500px]">
           <p className="pb-2 text-sm text-blue-900">Projekter</p>
-          <Project text="Viskum App" />
+          <Project link="/viskum-app-v1" text="Viskum App" />
         </div>
         <div className="w-full sm:w-[500px]">
           <p className="pb-2 text-sm text-blue-900">Teknologier</p>

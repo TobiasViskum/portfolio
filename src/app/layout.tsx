@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
+import { HomeIcon } from "@/svg/HomeIcon";
+import { ThemeSwitcher } from "./_components/ThemeSwitcher";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,17 +13,30 @@ export const metadata: Metadata = {
   description: "Tobias' portfolio",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <head>
         <meta name="theme-color" content="#000000" />
       </head>
-      <body className={cn(inter.className, "backdrop-blur bg-opacity-25 px-4 min-h-[100svh]")}>
+      <body className={cn(inter.className, "min-h-[100svh] dark:bg-black")}>
+        <ThemeSwitcher />
+        {/* <div className="group fixed left-0 flex h-full w- flex-col items-start justify-center gap-y-8 pl-2">
+          <div className="flex items-center gap-x-2">
+            <HomeIcon />
+            <p className="pb-2 text-lg font-medium opacity-0 group-hover:opacity-75">
+              Home
+            </p>
+          </div>
+        </div> */}
         <ThemeProvider
+          defaultTheme="light"
           attribute="class"
           themes={["dark", "light"]}
-          defaultTheme="white"
           disableTransitionOnChange
         >
           {children}
