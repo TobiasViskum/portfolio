@@ -1,13 +1,14 @@
 "use client";
 
 import { vEvent } from "@/lib/vEvent";
-import { ReactNode, useEffect, useRef } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 
 export function Wrapper({ children }: { children: ReactNode }) {
   const sidebarRef = useRef<HTMLDivElement | null>(null);
+  const [sidebarState, setSidebarState] = useState<"open" | "closed">("closed");
 
   useEffect(() => {
-    function onKeyUp() {
+    function notifySidebarChange() {
       const sidebar = sidebarRef.current;
 
       if (sidebar) {
@@ -15,22 +16,37 @@ export function Wrapper({ children }: { children: ReactNode }) {
         const noHover = sidebar.matches(":not(:has(:hover))");
         if (noFocus && noHover) {
           vEvent.dispatch("sidebarChange", { newState: "closed" });
+          setSidebarState("closed");
         }
       }
     }
 
-    document.addEventListener("keyup", onKeyUp);
+    document.addEventListener("keyup", notifySidebarChange);
+    document.addEventListener("click", notifySidebarChange);
 
-    return () => document.removeEventListener("keyup", onKeyUp);
+    return () => {
+      document.removeEventListener("keyup", notifySidebarChange);
+      document.removeEventListener("click", notifySidebarChange);
+    };
   }, []);
 
   return (
     <div
       ref={sidebarRef}
-      onMouseLeave={() =>
-        vEvent.dispatch("sidebarChange", { newState: "closed" })
-      }
-      className="group/sidebar fixed left-0 hidden h-full w-60 flex-col items-start justify-start gap-y-8 pl-8 pt-[25svh] 2xl:flex"
+      onMouseLeave={() => {
+        vEvent.dispatch("sidebarChange", { newState: "closed" });
+        setSidebarState("closed");
+        const activeElement = document.activeElement;
+        if (activeElement && activeElement instanceof HTMLElement) {
+          activeElement.blur();
+        }
+      }}
+      data-sidebar-state={sidebarState}
+      onMouseEnter={() => {
+        vEvent.dispatch("sidebarChange", { newState: "open" });
+        setSidebarState("open");
+      }}
+      className="group/sidebar 3xl:w-72 fixed left-0 hidden h-full w-64 flex-col items-start justify-start gap-y-8 pl-8 pt-[25svh] 2xl:flex"
     >
       {children}
     </div>

@@ -2,14 +2,14 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-export interface InputProps extends React.HTMLAttributes<HTMLHeadingElement> {}
+export interface Props extends React.HTMLAttributes<HTMLHeadingElement> {}
 
-const H2 = React.forwardRef<HTMLHeadingElement, InputProps>(
+const H2 = React.forwardRef<HTMLHeadingElement, Props>(
   ({ className, ...props }, ref) => {
     return (
       <h2
         className={cn(
-          "xs:text-4xl text-first text-3xl font-extrabold md:text-5xl",
+          "text-3xl font-extrabold text-first xs:text-4xl md:text-5xl",
           className,
         )}
         ref={ref}

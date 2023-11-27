@@ -1,8 +1,9 @@
-import { fitnessHomePage } from "@/assets/viskum-app-v1";
+import { fitnessHomePage } from "@/assets";
 import { H1 } from "@/components/h1";
 import { H2 } from "@/components/h2";
 import { H3 } from "@/components/h3";
 import { P } from "@/components/p";
+import { SectionLayout1 } from "@/components/section-layout-1";
 import { cn } from "@/lib/utils";
 import { MySQLIcon } from "@/svg/MySQLIcon";
 import { ReactIcon } from "@/svg/ReactIcon";
@@ -28,15 +29,13 @@ export default function ViskumAppV1Page() {
       <div className="space-y-2">
         <P className="text-black">Begyndelse: 05/09-2022</P>
         <article className="space-y-20">
-          <section className="space-y-4">
-            <H2>Om appen</H2>
-            <P className="xs:text-base text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
-              libero! Minima, optio et voluptatem voluptate incidunt accusamus
-              accusantium rerum! Dolores mollitia vero facilis tempora
-              voluptatibus.
-            </P>
-          </section>
+          <SectionLayout1 title="Om appen">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+            dolor soluta assumenda ullam laborum ut, excepturi explicabo ea
+            dolore dolorum architecto, numquam, debitis aut porro voluptate. Id
+            explicabo porro, cumque dolores, cupiditate saepe maiores totam sunt
+            commodi magni repudiandae provident?
+          </SectionLayout1>
           <section className="flex flex-col gap-x-4 md:flex-row">
             <Image
               priority

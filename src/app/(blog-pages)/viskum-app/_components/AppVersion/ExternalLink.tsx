@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { Button } from "@/components/button";
 
 type Props = {
   href: string;
@@ -8,19 +8,17 @@ type Props = {
 };
 
 export function ExternalLink({ href, text }: Props) {
-  const router = useRouter();
-
   return (
-    <button
+    <Button
       onClick={(e) => {
         e.stopPropagation();
         e.preventDefault();
         window.open(href, "_blank");
       }}
       id="externalLink"
-      className="bg-first xs:text-sm group flex w-full items-center justify-center gap-x-1 rounded-md px-4 py-2 text-xs text-background transition-colors hover:bg-opacity-90"
+      className="group w-full sm:w-64"
     >
-      Link: <b>{text}</b>
-    </button>
+      Link: <b className="group-hover:underline">{text}</b>
+    </Button>
   );
 }

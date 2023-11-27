@@ -5,7 +5,7 @@ import { H1 } from "@/components/h1";
 
 export default function Home() {
   return (
-    <div className="flex w-full flex-col items-center px-4">
+    <main className="flex w-full flex-col items-center px-4">
       <div className="flex w-fit flex-col items-center pb-24 pt-[min(15svh,200px)] text-center ">
         <Image
           priority
@@ -14,7 +14,7 @@ export default function Home() {
           className="profile-blur h-24 w-24 rounded-full"
         />
         <div className="space-y-2">
-          <H1 className="xs:text-4xl text-gradient text-3xl md:text-4xl">
+          <H1 className="text-gradient text-3xl xs:text-4xl md:text-4xl">
             Tobias T. Viskum
           </H1>
           <p className="max-w-md font-medium tracking-tight text-foreground [text-wrap:balance]">
@@ -25,17 +25,18 @@ export default function Home() {
         </div>
       </div>
       <div className="flex w-full flex-col items-center space-y-8">
-        <div className="w-full sm:w-[500px]">
-          <p className="text-second pb-2 text-sm">Projekter</p>
+        <div className="w-full space-y-4 sm:w-[500px]">
+          <p className="text-sm text-second">Projekter</p>
           <Project link="/viskum-app" text="Viskum App" />
+          <Project link="/lectio" text="Lectio Web" />
         </div>
         <div className="w-full sm:w-[500px]">
-          <p className="text-second pb-2 text-sm">Teknologier</p>
+          <p className="pb-2 text-sm text-second">Teknologier</p>
           <div className="text-foreground">
             Tailwind, NextJS, Vite, React, CSS, CSS-Modules, MySQL, Redis
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

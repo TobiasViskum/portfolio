@@ -1,3 +1,4 @@
+import { Boxes, Home, AxeIcon } from "lucide-react";
 import { ItemExpand } from "./ItemExpand";
 import { ItemNoExpand } from "./ItemNoExpand";
 import { Wrapper } from "./Wrapper";
@@ -5,28 +6,21 @@ import { Wrapper } from "./Wrapper";
 export function Sidebar() {
   return (
     <Wrapper>
-      <ItemNoExpand text="Hjem" href="/" />
+      <ItemNoExpand text="Hjem" href="/" Icon={<Home />} />
       <ItemExpand
+        title="Projekter"
         options={[
           {
             text: "Viskum App",
             href: "/viskum-app",
           },
           {
-            text: "Projekt 2",
-            href: "/",
-          },
-          {
-            text: "Projekt 3",
-            href: "/",
-          },
-          {
-            text: "Projekt 4",
-            href: "/",
+            text: "Lectio",
+            href: "/lectio",
           },
         ]}
+        Icon={<Boxes />}
       />
-      <ItemNoExpand text="Hjem" href="/" />
     </Wrapper>
   );
 }

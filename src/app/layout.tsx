@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="theme-color" content="#FFFFFF" />
+        <meta name="theme-color" content="rgb(var(--background))" />
       </head>
       <body className={cn(inter.className, "min-h-[100svh]")}>
         <ThemeProvider

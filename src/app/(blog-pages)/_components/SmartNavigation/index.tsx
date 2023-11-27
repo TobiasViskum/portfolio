@@ -2,13 +2,15 @@
 
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon, ChevronRightIcon } from "@radix-ui/react-icons";
+import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Fragment } from "react";
 
 export function SmartNavigation() {
   const path = usePathname();
   const splitPath = path.split("/");
+  const router = useRouter();
 
   const pathArray: { title: string; href: string }[] = [
     { title: "Hjem", href: "/" },
@@ -19,7 +21,7 @@ export function SmartNavigation() {
       href: "/viskum-app",
       title: "Viskum app",
     });
-  } else if (/\/viskum-app\/.*/) {
+  } else if (/\/viskum-app\/.*/.test(path)) {
     const lastPath = splitPath[splitPath.length - 1];
     pathArray.push({
       href: "/viskum-app",
@@ -29,10 +31,25 @@ export function SmartNavigation() {
       href: `/viskum-app/${lastPath}`,
       title: lastPath,
     });
+  } else if (path === "/lectio") {
+    pathArray.push({
+      href: "/lectio",
+      title: "Lectio web",
+    });
   }
 
   return (
-    <div className="text-link flex items-center gap-x-1">
+    <div className="flex items-center gap-x-1 text-link">
+      <div className="flex items-center gap-x-4 pr-3">
+        <button
+          onClick={() => history.back()}
+          className="flex items-center hover:underline"
+        >
+          <ChevronLeft className="h-5 w-5" />
+          Tilbage
+        </button>
+        <div className="h-3.5 w-[1px] rounded-full bg-foreground" />
+      </div>
       {pathArray.map((path, i) => {
         const addArrow = i !== pathArray.length - 1;
 

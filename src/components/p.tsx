@@ -2,13 +2,13 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-export interface InputProps extends React.HTMLAttributes<HTMLHeadingElement> {}
+export interface Props extends React.HTMLAttributes<HTMLParagraphElement> {}
 
-const P = React.forwardRef<HTMLHeadingElement, InputProps>(
+const P = React.forwardRef<HTMLParagraphElement, Props>(
   ({ className, ...props }, ref) => {
     return (
       <p
-        className={cn("xs:text-sm text-xs text-foreground", className)}
+        className={cn("text-xs text-foreground xs:text-sm", className)}
         ref={ref}
         {...props}
       />

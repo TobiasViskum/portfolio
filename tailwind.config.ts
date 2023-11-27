@@ -1,5 +1,5 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+const tailwindConfig: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -19,6 +19,11 @@ module.exports = {
       screens: {
         xxs: "320px",
         xs: "480px",
+        "3xl": "1764px",
+      },
+      scale: {
+        "sidebar-initial": "1.2",
+        "sidebar-hover": "1.3",
       },
       colors: {
         foreground: "rgb(var(--foreground) / <alpha-value>)",
@@ -36,12 +41,12 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: 0 },
+          from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+          to: { height: "0" },
         },
       },
       animation: {
@@ -52,3 +57,5 @@ module.exports = {
   },
   plugins: [require("tailwindcss-animate")],
 };
+
+module.exports = tailwindConfig;
