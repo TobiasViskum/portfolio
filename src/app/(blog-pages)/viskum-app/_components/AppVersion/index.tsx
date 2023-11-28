@@ -5,7 +5,6 @@ import { previewAppV1, previewAppV2, previewAppV3 } from "@/assets";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { H3 } from "@/components/h3";
-import { Button } from "@/components/button";
 
 type Props = {
   versionNumber: 1 | 2 | 3;
@@ -43,7 +42,8 @@ export function AppVersion({
           <Image
             src={image}
             alt="preview"
-            fill
+            width={640}
+            priority
             className="transition-all group-[:hover:not(:has(#externalLink:hover))]:opacity-25"
           />
         </div>

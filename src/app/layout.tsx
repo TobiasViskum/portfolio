@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
-import { HomeIcon } from "@/svg/HomeIcon";
 import { ThemeSwitcher } from "./_components/ThemeSwitcher";
 import { Sidebar } from "./(blog-pages)/_components/Sidebar";
 
@@ -33,6 +32,7 @@ export default function RootLayout({
         >
           <ThemeSwitcher />
           <Sidebar />
+
           {children}
         </ThemeProvider>
       </body>

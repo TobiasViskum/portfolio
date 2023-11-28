@@ -7,26 +7,68 @@ export function Wrapper({ children }: { children: ReactNode }) {
   const sidebarRef = useRef<HTMLDivElement | null>(null);
   const [sidebarState, setSidebarState] = useState<"open" | "closed">("closed");
 
+  function closeSidebar() {
+    const sidebar = sidebarRef.current;
+    if (sidebar) {
+      const allExpandElements = sidebar.querySelectorAll("[data-expanded]");
+
+      if (allExpandElements.length > 0) {
+        for (let expandElement of allExpandElements) {
+          expandElement.setAttribute("data-expanded", "false");
+        }
+
+        setTimeout(() => {
+          vEvent.dispatch("sidebarChange", { newState: "closed" });
+
+          setSidebarState("closed");
+        }, 50);
+      } else {
+        vEvent.dispatch("sidebarChange", { newState: "closed" });
+
+        setSidebarState("closed");
+      }
+    }
+  }
+
   useEffect(() => {
-    function notifySidebarChange() {
+    function handleSidebarChange() {
       const sidebar = sidebarRef.current;
 
       if (sidebar) {
-        const noFocus = sidebar.matches(":not(:has(:focus))");
-        const noHover = sidebar.matches(":not(:has(:hover))");
-        if (noFocus && noHover) {
-          vEvent.dispatch("sidebarChange", { newState: "closed" });
-          setSidebarState("closed");
+        const noFocus = sidebar.matches(":not(:focus)");
+        const noHover = sidebar.matches(":not(:hover)");
+        const hasNoFocus = sidebar.matches(":not(:has(:focus))");
+        const hasNoHover = sidebar.matches(":not(:has(:hover))");
+        if (noFocus && noHover && hasNoFocus && hasNoHover) {
+          closeSidebar();
         }
       }
     }
+    function windowBlur() {
+      handleSidebarChange();
+      const activeElement = document.activeElement;
+      if (activeElement && activeElement instanceof HTMLElement) {
+        activeElement.blur();
+      }
+    }
+    function documentElemFocus() {
+      const sidebar = sidebarRef.current;
+      if (sidebar) {
+        const hasFocus = sidebar.matches(":has(:focus)");
+        if (hasFocus) setSidebarState("open");
+      }
+    }
 
-    document.addEventListener("keyup", notifySidebarChange);
-    document.addEventListener("click", notifySidebarChange);
+    document.addEventListener("keyup", handleSidebarChange);
+    document.addEventListener("click", handleSidebarChange);
+    window.addEventListener("blur", windowBlur);
+    document.addEventListener("focusin", documentElemFocus);
 
     return () => {
-      document.removeEventListener("keyup", notifySidebarChange);
-      document.removeEventListener("click", notifySidebarChange);
+      document.removeEventListener("keyup", handleSidebarChange);
+      document.removeEventListener("click", handleSidebarChange);
+      window.removeEventListener("blur", windowBlur);
+      document.removeEventListener("focusin", documentElemFocus);
     };
   }, []);
 
@@ -34,8 +76,8 @@ export function Wrapper({ children }: { children: ReactNode }) {
     <div
       ref={sidebarRef}
       onMouseLeave={() => {
-        vEvent.dispatch("sidebarChange", { newState: "closed" });
-        setSidebarState("closed");
+        closeSidebar();
+
         const activeElement = document.activeElement;
         if (activeElement && activeElement instanceof HTMLElement) {
           activeElement.blur();

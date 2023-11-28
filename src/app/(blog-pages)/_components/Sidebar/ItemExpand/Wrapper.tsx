@@ -24,7 +24,7 @@ export function Wrapper({ children, options }: Props) {
   const expandDivRef = useRef<HTMLDivElement | null>(null);
 
   const linkTw =
-    'hover:text-first py-2 text-xl transition-[transform,color] hover:scale-110 origin-left w-full whitespace-nowrap outline-0 focus-visible:scale-110 focus-visible:text-first [&[data-active="true"]:not(:hover)]:text-link font-normal';
+    'hover:text-first py-2 text-base transition-[transform,color] hover:scale-110 origin-left w-full whitespace-nowrap outline-0 focus-visible:scale-110 focus-visible:text-first [&[data-active="true"]:not(:hover):not(:focus-visible)]:text-link font-normal';
 
   const lineSize = 2;
   const lineLeftOffset = 12;
@@ -51,20 +51,30 @@ export function Wrapper({ children, options }: Props) {
 
   return (
     <div
-      className="group/expand 3xl:min-w-[164px] flex min-w-[128px] flex-col "
+      className="group/expand 3xl:min-w-[164px] flex min-w-[140px] flex-col "
       data-expanded={isExpanded}
       ref={expandDivRef}
     >
       <button
         className="group/item outline-0"
-        onClick={() => setIsExpanded((prev) => !prev)}
+        onClick={() => {
+          const div = expandDivRef.current;
+          if (div) {
+            const prev = div.getAttribute("data-expanded") || "";
+
+            if (prev === "false") {
+              setIsExpanded(true);
+            } else {
+              setIsExpanded(false);
+            }
+          }
+        }}
       >
         {children}
       </button>
       <div
         className={cn(
-          "grid w-full overflow-y-hidden transition-[grid-template-rows]",
-          isExpanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+          'grid w-full overflow-y-hidden transition-[grid-template-rows] group-data-[expanded="false"]/expand:grid-rows-[0fr] group-data-[expanded="true"]/expand:grid-rows-[1fr]',
         )}
       >
         <div
@@ -72,17 +82,18 @@ export function Wrapper({ children, options }: Props) {
           style={{ paddingLeft: 24 + lineLeftOffset }}
         >
           <div
-            className="absolute h-[calc(100%-22px)] rounded-full bg-foreground"
+            className="absolute h-[calc(100%-20px)] rounded-full bg-foreground"
             style={{ width: `${lineSize}px`, left: lineLeftOffset }}
           />
           {options.map((option, i) => {
+            const baseTop = 22;
             let top = 0;
             if (i === 0) {
-              top = 20;
+              top = baseTop;
             } else {
-              top = i * (28 + 16) + 20;
+              top = i * (baseTop + 18) + baseTop;
             }
-            top = top + 2 - lineSize;
+            top = top - 2 - lineSize;
 
             return (
               <Fragment key={option.href + option.text}>

@@ -12,7 +12,7 @@ export default function ViskumAppPage() {
   return (
     <div className="space-y-10">
       <div>
-        <H1>Viskum App</H1>
+        <H1 style={{ viewTransitionName: "viskum-app" }}>Viskum App</H1>
         <div className="flex items-center gap-x-2">
           <TailwindIcon className="scale-75" />
           <ReactIcon />
