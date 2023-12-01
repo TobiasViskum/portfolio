@@ -7,6 +7,7 @@ import { TailwindIcon } from "@/svg/TailwindIcon";
 import { ViteIcon } from "@/svg/ViteIcon";
 import { AppVersion } from "./_components/AppVersion";
 import { SectionLayout1 } from "@/components/section-layout-1";
+import { NextJSIcon } from "@/svg/NextJSIcon";
 
 export default function ViskumAppPage() {
   return (
@@ -19,19 +20,25 @@ export default function ViskumAppPage() {
           <RedisIcon className="ml-1" />
           <MySQLIcon className="mx-2" />
           <ViteIcon />
-          Next.JS
-          {/* <NextJSIcon className="scale-125" /> */}
+          <div className="block dark:hidden">Next.JS</div>
+          <NextJSIcon className="hidden scale-125 dark:block" />
         </div>
       </div>
       <SectionLayout1 title="Om dette projekt">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam dolor
-        soluta assumenda ullam laborum ut, excepturi explicabo ea dolore dolorum
-        architecto, numquam, debitis aut porro voluptate. Id explicabo porro,
-        cumque dolores, cupiditate saepe maiores totam sunt commodi magni
-        repudiandae provident?
+        Projektet &quot;Viskum App&quot; er mit første projekt lavet i React.
+        Først blev appen lavet med idéen om, at man skulle kunne tracke sine
+        fremskridt i fitness. Senere udviklede appen sig også til, at man kunne
+        tracke sin cardio progress.
+        <br />
+        <br />
+        Appen er gået igennem to store rewrites - derfor er der en version 2 og
+        3. De to rewrites har handlet om UI, skift fra javascript til
+        typescript, omskrivning i et andet framework, og ændring af hvordan
+        frontend og backend virker sammen. Under kan der læses videre og de tre
+        forskellige versioner.
       </SectionLayout1>
       <H2>Appens versioner</H2>
-      <div className="w-full space-y-8">
+      <div className="w-full space-y-12">
         <AppVersion
           versionNumber={1}
           externalText="viskum-app.v1.muksiv.dk"

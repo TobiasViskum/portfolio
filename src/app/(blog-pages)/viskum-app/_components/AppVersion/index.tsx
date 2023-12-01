@@ -1,10 +1,11 @@
 import { P } from "@/components/p";
 import Link from "next/link";
-import { ExternalLink } from "./ExternalLink";
 import { previewAppV1, previewAppV2, previewAppV3 } from "@/assets";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { H3 } from "@/components/h3";
+import { ImageOverlay } from "./ImageOverlay";
+import { Button } from "@/components/button";
 
 type Props = {
   versionNumber: 1 | 2 | 3;
@@ -25,13 +26,20 @@ export function AppVersion({
   } else if (versionNumber === 3) {
     image = previewAppV3;
   }
-  let text = "";
+  let text: JSX.Element = <></>;
   if (versionNumber === 1) {
-    text = "Dette er den første version af appen.";
+    text = (
+      <P>
+        Dette er den første version af appen og derfor også mit første projekt.
+        <br />
+        Den er lavet i React spm frontend og express.js som backend og MySQL som
+        database.
+      </P>
+    );
   } else if (versionNumber === 2) {
-    text = "";
+    text = <P>Dette er den anden version af appen. Den </P>;
   } else if (versionNumber === 3) {
-    text = "";
+    text = <P></P>;
   }
 
   return (
@@ -46,20 +54,22 @@ export function AppVersion({
             priority
             className="transition-all group-[:hover:not(:has(#externalLink:hover))]:opacity-25"
           />
+          <ImageOverlay text={externalText} href={externalHref} />
         </div>
         <div className="flex w-full flex-col justify-between gap-y-2">
           <div className="w-full min-w-[300px] space-y-2">
             <H3 className="hidden sm:block">Version {versionNumber}</H3>
-            <P>{text}</P>
-            <Link
-              href={`/viskum-app/v${versionNumber}`}
-              className="flex items-center text-link hover:underline"
-            >
-              Læs videre <ChevronRight className="h-4 w-4" />
-            </Link>
+            <div className="w-full sm:max-w-md">{text}</div>
           </div>
 
-          <ExternalLink text={externalText} href={externalHref} />
+          <Link tabIndex={-1} href={`/viskum-app/v${versionNumber}`}>
+            <Button className="flex w-full items-center justify-center gap-x-1 font-medium sm:w-40">
+              Læs videre
+              <ChevronRight className="h-5 w-5" />
+            </Button>
+          </Link>
+
+          {/* <ExternalLink text={externalText} href={externalHref} /> */}
         </div>
       </div>
       {/* <Link
