@@ -30,16 +30,27 @@ export function AppVersion({
   if (versionNumber === 1) {
     text = (
       <P>
-        Dette er den første version af appen og derfor også mit første projekt.
-        <br />
-        Den er lavet i React spm frontend og express.js som backend og MySQL som
-        database.
+        {`
+        Dette er den første version af appen og derfor også mit første projekt. Den er lavet i React som frontend og express.js som backend og MySQL som database.
+        `}
       </P>
     );
   } else if (versionNumber === 2) {
-    text = <P>Dette er den anden version af appen. Den </P>;
+    text = (
+      <P>
+        {`
+        Dette er den anden version af appen, og min første introduktion til Typescript.
+        `}
+      </P>
+    );
   } else if (versionNumber === 3) {
-    text = <P></P>;
+    text = (
+      <P>
+        {`
+        Dette er den tredje version, og indtil videre sidste version, af appen. Den er skrevet i et andet framework, og jeg bruger for første gang Tailwind.
+       `}
+      </P>
+    );
   }
 
   return (

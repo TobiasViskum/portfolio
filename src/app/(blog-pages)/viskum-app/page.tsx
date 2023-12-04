@@ -25,17 +25,14 @@ export default function ViskumAppPage() {
         </div>
       </div>
       <SectionLayout1 title="Om dette projekt">
-        Projektet &quot;Viskum App&quot; er mit første projekt lavet i React.
-        Først blev appen lavet med idéen om, at man skulle kunne tracke sine
-        fremskridt i fitness. Senere udviklede appen sig også til, at man kunne
-        tracke sin cardio progress.
+        {`
+        Projektet "Viskum App" er mit første projekt lavet i React. Først blev appen lavet med idéen om, at man skulle kunne tracke sine fremskridt i fitness. Senere udviklede appen sig også til, at man kunne tracke sin cardio progress.
+        `}
         <br />
         <br />
-        Appen er gået igennem to store rewrites - derfor er der en version 2 og
-        3. De to rewrites har handlet om UI, skift fra javascript til
-        typescript, omskrivning i et andet framework, og ændring af hvordan
-        frontend og backend virker sammen. Under kan der læses videre og de tre
-        forskellige versioner.
+        {`
+        Appen er gået igennem to store rewrites - derfor er der en version 2 og 3. De to rewrites har handlet om UI, skift fra Javascript til Typescript, omskrivning i et andet framework, ændring af hvordan frontend og backend virker sammen og skift fra standard CSS til Tailwind. Under kan der læses videre om de tre forskellige versioner.
+        `}
       </SectionLayout1>
       <H2>Appens versioner</H2>
       <div className="w-full space-y-12">

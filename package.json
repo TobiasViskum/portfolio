@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "git add . && git commit -m 'update' && git push",
+    "deploy": "pnpm run build && git add . && git commit -m 'update' && git push",
     "startup": "git pull origin main --rebase && npm i && npm run build && npm start"
   },
   "dependencies": {

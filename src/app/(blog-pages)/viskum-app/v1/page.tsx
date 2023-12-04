@@ -1,18 +1,16 @@
 import { fitnessHomePage } from "@/assets";
 import { Button } from "@/components/button";
 import { H1 } from "@/components/h1";
-import { H2 } from "@/components/h2";
-import { H3 } from "@/components/h3";
 import { P } from "@/components/p";
 import { SectionLayout1 } from "@/components/section-layout-1";
 import { SectionLayout2 } from "@/components/section-layout-2";
 import { SectionWrapper } from "@/components/section-wrapper";
-import { cn } from "@/lib/utils";
+import { CssIcon } from "@/svg/CssIcon";
+import { JavascriptIcon } from "@/svg/JavascriptIcon";
 import { MySQLIcon } from "@/svg/MySQLIcon";
 import { ReactIcon } from "@/svg/ReactIcon";
 import { ViteIcon } from "@/svg/ViteIcon";
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function ViskumAppV1Page() {
@@ -20,7 +18,10 @@ export default function ViskumAppV1Page() {
     <div className="space-y-8">
       <div className="space-y-4">
         <H1>Viskum App V1</H1>
+
         <div className="flex items-center gap-x-2">
+          <JavascriptIcon />
+          <CssIcon />
           <ReactIcon />
           <ViteIcon />
           <MySQLIcon />
