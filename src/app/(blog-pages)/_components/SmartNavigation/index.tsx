@@ -42,7 +42,7 @@ export function SmartNavigation() {
     <div className="flex items-center gap-x-1 text-link">
       <div className="flex items-center gap-x-4 pr-3">
         <button
-          onClick={() => history.back()}
+          onClick={() => router.back()}
           className="flex items-center hover:underline"
         >
           <ChevronLeft className="h-5 w-5" />

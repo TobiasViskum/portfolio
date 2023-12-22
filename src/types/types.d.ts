@@ -1,3 +1,3 @@
-interface ExtendedDocument extends Document {
+interface Document {
   startViewTransition?: any;
 }

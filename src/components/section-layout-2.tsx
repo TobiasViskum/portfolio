@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { H2 } from "./h2";
 import { P } from "./p";
 import Image, { StaticImageData } from "next/image";
 import { H3 } from "./h3";
@@ -19,8 +18,8 @@ const SectionLayout2 = React.forwardRef<HTMLElement, InputProps>(
     ref,
   ) => {
     return (
-      <section className="clearfix" ref={ref} {...props}>
-        <div className="w-full space-y-2 sm:space-y-0">
+      <article className="clearfix" ref={ref} {...props}>
+        <div className="w-full space-y-4 sm:space-y-0">
           <H3 className="block sm:hidden">{title}</H3>
           <div>
             <Image
@@ -30,7 +29,7 @@ const SectionLayout2 = React.forwardRef<HTMLElement, InputProps>(
               height={1280}
               alt="img"
               className={cn(
-                "mb-2 rounded-md sm:w-7/12 sm:max-w-md",
+                "mb-4 w-full rounded-md sm:mb-2 sm:w-7/12 sm:max-w-md",
                 direction === "reverse"
                   ? "sm:float-right sm:ml-4"
                   : "sm:float-left sm:mr-4",
@@ -40,9 +39,9 @@ const SectionLayout2 = React.forwardRef<HTMLElement, InputProps>(
         </div>
         <div className="w-full">
           <H3 className="hidden pb-1 sm:block">{title}</H3>
-          <P className="">{children}</P>
+          <P>{children}</P>
         </div>
-      </section>
+      </article>
     );
   },
 );

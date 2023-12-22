@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Navbar } from "./_components/Navbar";
 import { SmartNavigation } from "./_components/SmartNavigation";
+import { ReaderNavigation } from "./_components/ReaderNavigation";
 
 export default function BlogPagesLayout({ children }: { children: ReactNode }) {
   return (
@@ -12,6 +13,7 @@ export default function BlogPagesLayout({ children }: { children: ReactNode }) {
             <SmartNavigation />
           </div>
           {children}
+          <ReaderNavigation />
         </div>
       </div>
     </>

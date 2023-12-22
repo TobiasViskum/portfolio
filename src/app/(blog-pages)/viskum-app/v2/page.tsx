@@ -3,7 +3,7 @@ import { P } from "@/components/p";
 
 export default function ViskumAppProjectPage() {
   return (
-    <div className="space-y-2 pb-24">
+    <div className="space-y-2">
       <div className="space-y-6">
         <H1>Viskum App V2</H1>
         <P className="text-black">Begyndelse: 05/09-2023</P>

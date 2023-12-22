@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import { cloneElement } from "react";
 import { Wrapper } from "./Wrapper";
+import Link from "next/link";
 
 type Props = {
   text: string;

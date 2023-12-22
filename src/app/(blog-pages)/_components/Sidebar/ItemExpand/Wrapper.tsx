@@ -1,8 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { vEvent } from "@/lib/vEvent";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   Fragment,
@@ -51,7 +51,7 @@ export function Wrapper({ children, options }: Props) {
 
   return (
     <div
-      className="group/expand 3xl:min-w-[164px] flex min-w-[140px] flex-col "
+      className="group/expand flex min-w-[140px] flex-col 3xl:min-w-[164px]"
       data-expanded={isExpanded}
       ref={expandDivRef}
     >

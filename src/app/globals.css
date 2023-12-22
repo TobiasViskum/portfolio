@@ -64,9 +64,16 @@
 
 @layer base {
   * {
+    @apply border-border;
     border-color: rgb(var(--border));
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .link {
+    @apply text-link hover:underline;
   }
 }

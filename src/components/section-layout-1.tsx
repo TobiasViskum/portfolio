@@ -12,10 +12,10 @@ export interface InputProps extends React.HTMLAttributes<HTMLElement> {
 const SectionLayout1 = React.forwardRef<HTMLElement, InputProps>(
   ({ className, title, children, ...props }, ref) => {
     return (
-      <section className={cn("space-y-2", className)} ref={ref} {...props}>
+      <article className={cn("space-y-2", className)} ref={ref} {...props}>
         <H2>{title}</H2>
         <P className="text-sm xs:text-base">{children}</P>
-      </section>
+      </article>
     );
   },
 );

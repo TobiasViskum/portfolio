@@ -31,7 +31,7 @@ export function AppVersion({
     text = (
       <P>
         {`
-        Dette er den første version af appen og derfor også mit første projekt. Den er lavet i React som frontend og express.js som backend og MySQL som database.
+        Dette er den første version af appen og derfor også mit første projekt. Den er lavet i React som frontend, express.js som backend og MySQL som database.
         `}
       </P>
     );
@@ -39,7 +39,7 @@ export function AppVersion({
     text = (
       <P>
         {`
-        Dette er den anden version af appen, og min første introduktion til Typescript.
+        Dette er den anden version af appen, som i modsætning til første version, er blevet skrevet i Typescript.
         `}
       </P>
     );
@@ -47,7 +47,7 @@ export function AppVersion({
     text = (
       <P>
         {`
-        Dette er den tredje version, og indtil videre sidste version, af appen. Den er skrevet i et andet framework, og jeg bruger for første gang Tailwind.
+        Dette er den tredje version, og indtil videre sidste version af appen. Den er skrevet i et andet framework, og der bruges nu Tailwind i stedet for standard CSS.
        `}
       </P>
     );
