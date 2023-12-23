@@ -15,6 +15,7 @@ import { SassIcon } from "@/svg/SassIcon";
 import { TypescriptIcon } from "@/svg/TypescriptIcon";
 import { ViteIcon } from "@/svg/ViteIcon";
 import Link from "next/link";
+import Script from "next/script";
 
 export default function ViskumAppProjectPage() {
   return (
@@ -51,9 +52,10 @@ export default function ViskumAppProjectPage() {
           <SectionLayout2 title="Rewrite" image={previewAppV2}>
             d
           </SectionLayout2>
+
           <SectionLayout2
             title="Animations"
-            image={previewAppV2}
+            video="/v2-animation.mp4"
             direction="reverse"
           >
             d
