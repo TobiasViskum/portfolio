@@ -1,4 +1,4 @@
-import { previewAppV3 } from "@/assets";
+import { V3Navigation, previewAppV3 } from "@/assets";
 import { H1 } from "@/components/h1";
 import { P } from "@/components/p";
 import { PageContentWrapper } from "@/components/page-content-wrapper";
@@ -29,6 +29,7 @@ export default function ViskumAppProjectPage() {
       <PageContentWrapper>
         <div className="space-y-2 border-l py-1 pl-4 text-foreground ">
           <P className="opacity-80">Begyndelse: Start 2023</P>
+          <P className="opacity-80">Slut: Midt 2023</P>
           <div className="flex gap-x-2">
             <P className="opacity-80">Link:</P>
             <Link
@@ -49,9 +50,30 @@ export default function ViskumAppProjectPage() {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non,
             dolores?
           </SectionLayout1>
-          <SectionLayout2 title="Ny UI - igen" image={previewAppV3}>
+          <SectionLayout2 title="Log-ind system" image={previewAppV3}>
             sdfj
           </SectionLayout2>
+          <SectionLayout2
+            direction="reverse"
+            title="Ny UI - igen"
+            image={previewAppV3}
+          >
+            sdfj
+          </SectionLayout2>
+          <SectionLayout2 title="Forbedret navigation" image={V3Navigation}>
+            sdfj
+          </SectionLayout2>
+          <SectionLayout2
+            title="Kan installeres (PWA)"
+            direction="reverse"
+            image={V3Navigation}
+          >
+            sdfj
+          </SectionLayout2>
+          <SectionLayout1 title="Den sidste version (for nu)">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non,
+            dolores?
+          </SectionLayout1>
         </SectionWrapper>
       </PageContentWrapper>
     </PageWrapper>

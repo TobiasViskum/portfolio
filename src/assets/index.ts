@@ -7,6 +7,8 @@ import V1Chat from "./v1-chat.png";
 import V1Settings from "./v1-settings.png";
 import V1FitnessEdit from "./v1-fitness-edit.png";
 import V2FitnessAdd from "./v2-fitness-add.png";
+import V3Navigation from "./v3-navigation.png";
+import V3PwaMobile from "./v3-pwa-mobile.jpeg";
 
 export {
   profile,
@@ -18,4 +20,6 @@ export {
   V1Settings,
   V1FitnessEdit,
   V2FitnessAdd,
+  V3Navigation,
+  V3PwaMobile,
 };

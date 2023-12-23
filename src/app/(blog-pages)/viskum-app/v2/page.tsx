@@ -29,7 +29,7 @@ export default function ViskumAppProjectPage() {
       </PageHeader>
       <PageContentWrapper>
         <div className="space-y-2 border-l py-1 pl-4 text-foreground ">
-          <P className="opacity-80">Begyndelse: August 2022</P>
+          <P className="opacity-80">Begyndelse: Midt 2022</P>
           <div className="flex gap-x-2">
             <P className="opacity-80">Link:</P>
             <Link
