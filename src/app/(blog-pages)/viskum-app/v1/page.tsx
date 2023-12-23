@@ -24,12 +24,11 @@ export default function ViskumAppV1Page() {
         <CssIcon />
         <ReactIcon />
         <ViteIcon />
-        <MySQLIcon />
-        <ExpressIcon className="dark:fill-white" />
+        <ExpressIcon /> <MySQLIcon />
       </PageHeader>
       <PageContentWrapper>
-        <div className="space-y-2 border-l py-1 pl-4 text-sm text-foreground ">
-          <P className="opacity-80">Begyndelse: 05/09-2022</P>
+        <div className="space-y-2 border-l py-1 pl-4 text-foreground ">
+          <P className="opacity-80">Begyndelse: Marts 2022</P>
           <div className="flex gap-x-2">
             <P className="opacity-80">Link:</P>
             <Link
@@ -43,7 +42,7 @@ export default function ViskumAppV1Page() {
         </div>
 
         <SectionWrapper>
-          <SectionLayout1 title="Om appen" id="about">
+          <SectionLayout1 title="Om appen">
             Dette er en den første version af Viskum Appen, og projektet blev
             påbegyndt kort efter praktikken. Siden jeg under praktikken lærte
             React fortsatte jeg med det i frontenden. Da jeg også gerne vil
@@ -62,11 +61,9 @@ export default function ViskumAppV1Page() {
             kan man trykke på pilen over indstillingknappen, for at se sin
             udvikling.
             <br />
-            <br />
-            Hvis man trykker på indstillingsknappen har man mulighed for at
+            Hvis der trykkes på indstillingsknappen har man mulighed for at
             ændre unit på øvelsen, øvelsens navn, tilføje en note eller slette
             øvelsen. Alt bliver gemt og opdateret i databasen!
-            <br />
             <br />
             Derudover kan man også filtrere øvelserne mellem dem, som man har
             tilføjet under kategorien &quot;Max&quot; og kategoien
@@ -79,10 +76,8 @@ export default function ViskumAppV1Page() {
             gennemsnitshastighed og derefter gemmes tiden og distancen i
             databasen.
             <br />
-            <br />
             På samme måde som på fitness-siden kan man se indstillinger for
             turen og slette den, hvis det er nødvendigt.
-            <br />
             <br />
             På denne side er der dog endnu flere muligheder for filtrering! Man
             kan filtere mellem løb, cykel, svømning og for hver kan man også
@@ -95,7 +90,6 @@ export default function ViskumAppV1Page() {
             der på denne måde kunne gemmes emojis. Det blev aldrig færdiggjort,
             og chatten virker derfor ikke mere.
             <br />
-            <br />
             Dengang den virkede, kunne det lade sig gøre ved at bruge
             websockets, så der kunne holdes en connection åben mellem server og
             client. På den måde kunne man altid se de nyeste beskeder uden at
@@ -106,9 +100,10 @@ export default function ViskumAppV1Page() {
             direction="reverse"
             image={V1Settings}
           >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Praesentium esse vero deleniti odio ullam porro facilis! Incidunt
-            pariatur animi perspiciatis dicta nostrum magni nemo atque.
+            Man har også mulighed for at indstille sine personlige preferencer.
+            Der er indstillinger for både fitness- og cardio-siden, man kan
+            ændre sproget mellem engelsk og dansk, og man kan ændre sit
+            profilnavn.
           </SectionLayout2>
         </SectionWrapper>
       </PageContentWrapper>

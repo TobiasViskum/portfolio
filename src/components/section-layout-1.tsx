@@ -14,7 +14,7 @@ const SectionLayout1 = React.forwardRef<HTMLElement, InputProps>(
     return (
       <article className={cn("space-y-2", className)} ref={ref} {...props}>
         <H2>{title}</H2>
-        <P className="text-sm xs:text-base">{children}</P>
+        <P>{children}</P>
       </article>
     );
   },

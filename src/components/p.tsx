@@ -8,7 +8,7 @@ const P = React.forwardRef<HTMLParagraphElement, Props>(
   ({ className, ...props }, ref) => {
     return (
       <p
-        className={cn("text-xs text-foreground xs:text-sm", className)}
+        className={cn("text-sm text-foreground xs:text-base", className)}
         ref={ref}
         {...props}
       />
