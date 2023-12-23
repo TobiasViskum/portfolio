@@ -4,7 +4,10 @@ export function NextJSIcon({ className }: { className?: string }) {
   return (
     <a href="https://nextjs.org" target="_blank">
       <svg
-        className={cn("mx-4 h-10 w-10 fill-black dark:fill-white", className)}
+        className={cn(
+          "mx-4 h-10 w-10 scale-125 fill-black dark:fill-white",
+          className,
+        )}
         viewBox="0 -101.5 512 512"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"

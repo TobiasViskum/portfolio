@@ -74,6 +74,6 @@
 
 @layer utilities {
   .link {
-    @apply text-link hover:underline;
+    @apply text-sm text-link hover:underline sm:text-base;
   }
 }

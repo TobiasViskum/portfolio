@@ -28,7 +28,7 @@ export default function ViskumAppV1Page() {
       </PageHeader>
       <PageContentWrapper>
         <div className="space-y-2 border-l py-1 pl-4 text-foreground ">
-          <P className="opacity-80">Begyndelse: Marts 2022</P>
+          <P className="opacity-80">Begyndelse: Start 2022</P>
           <div className="flex gap-x-2">
             <P className="opacity-80">Link:</P>
             <Link
@@ -48,7 +48,7 @@ export default function ViskumAppV1Page() {
             React fortsatte jeg med det i frontenden. Da jeg også gerne vil
             kunne opbevare user data, så opsatte jeg også en backend, som
             primært består af API-endpoints, der laver queries til en database
-            og retunerer data til frontenden.
+            og retunerer den data til frontenden.
             <br />
             Appen består af en række features som en fitness-side, en
             cardio-side, en side for at indstille personlige preferencer og en
@@ -90,10 +90,14 @@ export default function ViskumAppV1Page() {
             der på denne måde kunne gemmes emojis. Det blev aldrig færdiggjort,
             og chatten virker derfor ikke mere.
             <br />
-            Dengang den virkede, kunne det lade sig gøre ved at bruge
-            websockets, så der kunne holdes en connection åben mellem server og
-            client. På den måde kunne man altid se de nyeste beskeder uden at
-            opdatere siden.
+            Dengang den virkede, kunne det lade sig gøre ved at bruge websockets
+            (
+            <a target="_blank" className="link" href="https://socket.io/">
+              socket.io
+            </a>
+            ), så der kunne holdes en connection åben mellem server og client.
+            På den måde kunne man altid se de nyeste beskeder uden at opdatere
+            siden.
           </SectionLayout2>
           <SectionLayout2
             title="Indstillinger"

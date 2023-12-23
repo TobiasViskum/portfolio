@@ -1,4 +1,4 @@
-import { previewAppV2 } from "@/assets";
+import { V2FitnessAdd, previewAppV2 } from "@/assets";
 import { P } from "@/components/p";
 import { PageContentWrapper } from "@/components/page-content-wrapper";
 import { PageHeader } from "@/components/page-header";
@@ -49,8 +49,14 @@ export default function ViskumAppProjectPage() {
             samme tidspunkt opdagede Typescript, blev der også brugt mange
             kræfter i at få styr på det.
           </SectionLayout1>
-          <SectionLayout2 title="Rewrite" image={previewAppV2}>
-            d
+          <SectionLayout2 title="Ny UI" image={previewAppV2}>
+            Som det kan ses i billedet til venstre, lavede jeg en fulstændig ny
+            UI til fitness-siden. Der kom aldrig en ny UI til de andre sider,
+            før jeg valgte at omskrive appen i et nyt framework, som er{" "}
+            <Link href={"/viskum-app/v3"} className="link">
+              version 3
+            </Link>
+            .
           </SectionLayout2>
 
           <SectionLayout2
@@ -58,7 +64,24 @@ export default function ViskumAppProjectPage() {
             video="/v2-animation.mp4"
             direction="reverse"
           >
-            d
+            I forbindelse med en ny UI, syntes jeg også, at det kunne være fedt
+            med mange animations. Derfor, som det ses i vidoen til højre, er der
+            animations når man scroller, vil lukke og åbne en gruppe som
+            &quot;Upper Body&quot; eller når man vil slette en øvelse laver
+            fitness-kortet et flip. I stedet for standard CSS blev der brugt en
+            udvidelse af CSS, som hedder{" "}
+            <a target="_blank" className="link" href="https://sass-lang.com/">
+              Sass
+            </a>
+            .
+          </SectionLayout2>
+          <SectionLayout2 title="Forbedringer" image={V2FitnessAdd}>
+            Med denne version af appen kom også en forbedring. Hvis man vil
+            tilføje en ny fitness øvelse og man f.eks. skriver
+            &quot;Squat&quot;, kigges databasen igennem efter andre øvelser, som
+            har ordet &quot;Squat&quot;, og man bliver forslået alle disse
+            øvelser. Man kan selvfølgelig stadig kalde den noget, andre ikke har
+            kaldt den.
           </SectionLayout2>
         </SectionWrapper>
       </PageContentWrapper>

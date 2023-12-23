@@ -54,7 +54,6 @@ const SectionLayout2 = React.forwardRef<HTMLElement, InputProps>(
                   height={1280}
                   loop
                   controls
-                  autoPlay
                   className={cn(
                     "mb-4 w-full rounded-md sm:mb-2 sm:w-7/12 sm:max-w-md",
                     direction === "reverse"
