@@ -28,6 +28,10 @@ export default function Home() {
         <div className="w-full space-y-4 sm:w-[500px]">
           <p className="text-sm text-second">Projekter</p>
           <Project link="/viskum-app" text="Viskum App" />
+          <Project
+            link="/teoriproeve-practice"
+            text="Mini projekt: Teoriprøve pracitce"
+          />
           <Project link="/lectio" text="Lectio Web" />
         </div>
         <div className="w-full sm:w-[500px]">

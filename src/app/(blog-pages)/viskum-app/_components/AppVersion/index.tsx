@@ -30,25 +30,24 @@ export function AppVersion({
   if (versionNumber === 1) {
     text = (
       <P>
-        {`
-        Dette er den første version af appen og derfor også mit første projekt. Den er lavet i React som frontend, express.js som backend og MySQL som database.
-        `}
+        Dette er den første version af appen og derfor også mit første projekt.
+        Den er lavet i React som frontend, express.js som backend og MySQL som
+        database.
       </P>
     );
   } else if (versionNumber === 2) {
     text = (
       <P>
-        {`
-        Dette er den anden version af appen, som i modsætning til første version, er blevet skrevet i Typescript.
-        `}
+        Dette er den anden version af appen, som i modsætning til første
+        version, er blevet skrevet i Typescript.
       </P>
     );
   } else if (versionNumber === 3) {
     text = (
       <P>
-        {`
-        Dette er den tredje version, og indtil videre sidste version af appen. Den er skrevet i et andet framework, og der bruges nu Tailwind i stedet for standard CSS.
-       `}
+        Dette er den tredje version, og indtil videre sidste version af appen.
+        Den er skrevet i et andet framework, og der bruges nu Tailwind i stedet
+        for standard CSS.
       </P>
     );
   }
@@ -73,11 +72,12 @@ export function AppVersion({
             <div className="w-full sm:max-w-md">{text}</div>
           </div>
 
-          <Link tabIndex={-1} href={`/viskum-app/v${versionNumber}`}>
-            <Button className="flex w-full items-center justify-center gap-x-1 font-medium sm:w-40">
-              Læs videre
-              <ChevronRight className="h-5 w-5" />
-            </Button>
+          <Link
+            href={`/viskum-app/v${versionNumber}`}
+            className="link group flex w-fit items-center"
+          >
+            Læs mere
+            <ChevronRight className="h-5 w-5 origin-left transition-transform group-hover:translate-x-0.5 group-hover:scale-105" />
           </Link>
 
           {/* <ExternalLink text={externalText} href={externalHref} /> */}

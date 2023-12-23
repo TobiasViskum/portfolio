@@ -3,7 +3,12 @@ import { cn } from "@/lib/utils";
 export function TailwindIcon({ className }: { className?: string }) {
   return (
     <a className="https://tailwindcss.com" target="_blank">
-      <svg className={cn("grid h-8 w-[50px] place-items-center", className)}>
+      <svg
+        className={cn(
+          "grid h-8 w-[50px] scale-75 place-items-center",
+          className,
+        )}
+      >
         <path
           fillRule="evenodd"
           clipRule="evenodd"

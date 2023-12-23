@@ -8,7 +8,8 @@ import V1Settings from "./v1-settings.png";
 import V1FitnessEdit from "./v1-fitness-edit.png";
 import V2FitnessAdd from "./v2-fitness-add.png";
 import V3Navigation from "./v3-navigation.png";
-import V3PwaMobile from "./v3-pwa-mobile.jpeg";
+import V3PwaMobile from "./v3-pwa-mobile.png";
+import V3Login from "./v3-login.png";
 
 export {
   profile,
@@ -22,4 +23,5 @@ export {
   V2FitnessAdd,
   V3Navigation,
   V3PwaMobile,
+  V3Login,
 };
