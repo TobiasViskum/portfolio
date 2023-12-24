@@ -41,8 +41,8 @@ export function getLinkInfo(path: string) {
       text: "Version 2",
     };
     nextInfo = {
-      href: "/lectio",
-      text: "Lectio",
+      href: "/teoriproeve-practice",
+      text: "Teoriprøve",
     };
   } else if (path == "/lectio") {
     backInfo = {

@@ -2,6 +2,7 @@ import { V2FitnessAdd, previewAppV2 } from "@/assets";
 import { P } from "@/components/p";
 import { PageContentWrapper } from "@/components/page-content-wrapper";
 import { PageHeader } from "@/components/page-header";
+import { PageInfo } from "@/components/page-info";
 import { PageWrapper } from "@/components/page-wrapper";
 import { SectionLayout1 } from "@/components/section-layout-1";
 import { SectionLayout2 } from "@/components/section-layout-2";
@@ -28,19 +29,13 @@ export default function ViskumAppProjectPage() {
         <ExpressIcon /> <MySQLIcon />
       </PageHeader>
       <PageContentWrapper>
-        <div className="space-y-2 border-l py-1 pl-4 text-foreground ">
-          <P className="opacity-80">Begyndelse: Midt 2022</P>
-          <div className="flex gap-x-2">
-            <P className="opacity-80">Link:</P>
-            <Link
-              target="_blank"
-              href={EXTERNAL_HREF_VISKUM_APP_V2}
-              className="link opacity-100"
-            >
-              {EXTERNAL_TEXT_VISKUM_APP_V2}
-            </Link>
-          </div>
-        </div>
+        <PageInfo
+          startDate="Midt 2022"
+          endDate="Start 2023"
+          externalHref={EXTERNAL_HREF_VISKUM_APP_V2}
+          externalText={EXTERNAL_TEXT_VISKUM_APP_V2}
+          gitHref=""
+        />
 
         <SectionWrapper>
           <SectionLayout1 title="Om denne version">

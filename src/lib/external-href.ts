@@ -8,3 +8,6 @@ export const EXTERNAL_HREF_VISKUM_APP_V3 =
   "https://dev05.reactprojects.mywire.org";
 
 export const EXTERNAL_HREF_LECTIO = "https://lectio.muksiv.dk/log-ind";
+
+export const EXTERNAL_HREF_THEORY_PRACTICE =
+  "https://dev04.reactprojects.mywire.org/";
