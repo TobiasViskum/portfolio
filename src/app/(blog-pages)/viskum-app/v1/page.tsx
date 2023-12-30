@@ -9,6 +9,7 @@ import { SectionLayout2 } from "@/components/section-layout-2";
 import { SectionWrapper } from "@/components/section-wrapper";
 import { EXTERNAL_HREF_VISKUM_APP_V1 } from "@/lib/external-href";
 import { EXTERNAL_TEXT_VISKUM_APP_V1 } from "@/lib/external-text";
+import { GIT_HREF_VISKUM_APP_V1 } from "@/lib/git-href";
 import { CssIcon } from "@/svg/CssIcon";
 import { ExpressIcon } from "@/svg/ExpressIcon";
 import { JavascriptIcon } from "@/svg/JavascriptIcon";
@@ -33,7 +34,7 @@ export default function ViskumAppV1Page() {
           endDate="Midt 2022"
           externalHref={EXTERNAL_HREF_VISKUM_APP_V1}
           externalText={EXTERNAL_TEXT_VISKUM_APP_V1}
-          gitHref=""
+          gitHref={GIT_HREF_VISKUM_APP_V1}
         />
 
         <SectionWrapper>

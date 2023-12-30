@@ -2,6 +2,7 @@ import { profile } from "@/assets";
 import Image from "next/image";
 import Project from "./_components/Project";
 import { H1 } from "@/components/h1";
+import { P } from "@/components/p";
 
 export default function Home() {
   return (
@@ -17,28 +18,26 @@ export default function Home() {
           <H1 className="text-gradient text-3xl xs:text-4xl md:text-4xl">
             Tobias T. Viskum
           </H1>
-          <p className="max-w-md font-medium tracking-tight text-foreground [text-wrap:balance]">
+          <P className="max-w-md font-medium tracking-tight  [text-wrap:balance]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A, illo.
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod,
             provident!
-          </p>
+          </P>
         </div>
       </div>
       <div className="flex w-full flex-col items-center space-y-8">
         <div className="w-full space-y-4 sm:w-[500px]">
-          <p className="text-sm text-second">Projekter</p>
+          <P>Projekter</P>
           <Project link="/viskum-app" text="Viskum App" />
           <Project
             link="/teoriproeve-practice"
             text="Mini projekt: Teoriprøve pracitce"
           />
           <Project link="/lectio" text="Lectio Web" />
-        </div>
-        <div className="w-full sm:w-[500px]">
-          <p className="pb-2 text-sm text-second">Teknologier</p>
-          <div className="text-foreground">
-            Tailwind, NextJS, Vite, React, CSS, CSS-Modules, MySQL, Redis
-          </div>
+          <Project
+            link="/programmeringssprog-i-rust"
+            text="Programmeringssprog i Rust"
+          />
         </div>
       </div>
     </main>

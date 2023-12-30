@@ -31,6 +31,11 @@ export function SmartNavigation() {
       href: `/viskum-app/${lastPath}`,
       title: lastPath,
     });
+  } else if (path === "/teoriproeve-practice") {
+    pathArray.push({
+      href: "/teoriproeve-practice",
+      title: "Teoriprøve practice",
+    });
   } else if (path === "/lectio") {
     pathArray.push({
       href: "/lectio",

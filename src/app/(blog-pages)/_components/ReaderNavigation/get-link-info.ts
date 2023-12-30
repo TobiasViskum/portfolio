@@ -44,9 +44,18 @@ export function getLinkInfo(path: string) {
       href: "/teoriproeve-practice",
       text: "Teoriprøve",
     };
-  } else if (path == "/lectio") {
+  } else if (path == "/teoriproeve-practice") {
     backInfo = {
       href: "/viskum-app/v3",
+      text: "Tilbage",
+    };
+    nextInfo = {
+      href: "/lectio",
+      text: "Lectio",
+    };
+  } else if (path == "/lectio") {
+    backInfo = {
+      href: "/teoriproeve-practice",
       text: "Tilbage",
     };
     nextInfo = {

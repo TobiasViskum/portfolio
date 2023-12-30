@@ -1,5 +1,4 @@
 import { V2FitnessAdd, previewAppV2 } from "@/assets";
-import { P } from "@/components/p";
 import { PageContentWrapper } from "@/components/page-content-wrapper";
 import { PageHeader } from "@/components/page-header";
 import { PageInfo } from "@/components/page-info";
@@ -9,20 +8,20 @@ import { SectionLayout2 } from "@/components/section-layout-2";
 import { SectionWrapper } from "@/components/section-wrapper";
 import { EXTERNAL_HREF_VISKUM_APP_V2 } from "@/lib/external-href";
 import { EXTERNAL_TEXT_VISKUM_APP_V2 } from "@/lib/external-text";
+import { GIT_HREF_VISKUM_APP_V2 } from "@/lib/git-href";
 import { ExpressIcon } from "@/svg/ExpressIcon";
+import { JavascriptIcon } from "@/svg/JavascriptIcon";
 import { MySQLIcon } from "@/svg/MySQLIcon";
 import { ReactIcon } from "@/svg/ReactIcon";
 import { SassIcon } from "@/svg/SassIcon";
-import { TypescriptIcon } from "@/svg/TypescriptIcon";
 import { ViteIcon } from "@/svg/ViteIcon";
 import Link from "next/link";
-import Script from "next/script";
 
 export default function ViskumAppProjectPage() {
   return (
     <PageWrapper>
       <PageHeader title="Viskum App V2">
-        <TypescriptIcon />
+        <JavascriptIcon />
         <SassIcon />
         <ReactIcon />
         <ViteIcon />
@@ -30,28 +29,28 @@ export default function ViskumAppProjectPage() {
       </PageHeader>
       <PageContentWrapper>
         <PageInfo
-          startDate="Midt 2022"
+          startDate="Slut 2022"
           endDate="Start 2023"
           externalHref={EXTERNAL_HREF_VISKUM_APP_V2}
           externalText={EXTERNAL_TEXT_VISKUM_APP_V2}
-          gitHref=""
+          gitHref={GIT_HREF_VISKUM_APP_V2}
         />
 
         <SectionWrapper>
           <SectionLayout1 title="Om denne version">
             Denne version af appen har ikke de samme features som den første, da
-            formålet med denne version, var at lave en bedre UI. Men da jeg på
-            samme tidspunkt opdagede Typescript, blev der også brugt mange
-            kræfter i at få styr på det.
-          </SectionLayout1>
-          <SectionLayout2 title="Ny UI" image={previewAppV2}>
-            Som det kan ses i billedet til venstre, lavede jeg en fulstændig ny
-            UI til fitness-siden. Der kom aldrig en ny UI til de andre sider,
-            før jeg valgte at omskrive appen i et nyt framework, som er{" "}
-            <Link href={"/viskum-app/v3"} className="link">
+            formålet med denne version, var at lave en bedre UI. Men da jeg kort
+            tid efter opdagede Typescript, valgte jeg at omskrive i et nyt
+            framework, som er{" "}
+            <Link href={"/viskum-app/v3"} className="link whitespace-nowrap">
               version 3
             </Link>
-            .
+          </SectionLayout1>
+          <SectionLayout2 title="Ny UI" image={previewAppV2}>
+            Som det kan ses i billedet, lavede jeg en fulstændig ny UI til
+            fitness-siden. Der var fokus på, at det skulle være en pæn UI, som
+            skulle være behagelig at se på samtidig med, at den var nem at
+            navigere i.
           </SectionLayout2>
 
           <SectionLayout2

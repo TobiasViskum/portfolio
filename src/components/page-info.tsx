@@ -1,15 +1,14 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { H1 } from "./h1";
 import { P } from "./p";
 import Link from "next/link";
 
 export interface InputProps extends React.HTMLAttributes<HTMLDivElement> {
   startDate: string;
   endDate?: string;
-  externalHref: string;
-  externalText: string;
+  externalHref?: string;
+  externalText?: string;
   gitHref?: string;
 }
 
@@ -38,16 +37,18 @@ const PageInfo = React.forwardRef<HTMLDivElement, InputProps>(
       >
         <P className="opacity-80">Begyndelse: {startDate}</P>
         {endDate && <P className="opacity-80">Slut: {endDate}</P>}
-        <div className="flex gap-x-2">
-          <P className="opacity-80">Link:</P>
-          <Link
-            target="_blank"
-            href={externalHref}
-            className="link opacity-100"
-          >
-            {externalText}
-          </Link>
-        </div>
+        {externalHref && externalText && (
+          <div className="flex gap-x-2">
+            <P className="opacity-80">Link:</P>
+            <Link
+              target="_blank"
+              href={externalHref}
+              className="link opacity-100"
+            >
+              {externalText}
+            </Link>
+          </div>
+        )}
         {gitHref && (
           <div className="flex gap-x-2">
             <P className="opacity-80">Github:</P>

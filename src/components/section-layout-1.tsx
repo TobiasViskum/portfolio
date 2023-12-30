@@ -6,7 +6,7 @@ import { P } from "./p";
 
 export interface InputProps extends React.HTMLAttributes<HTMLElement> {
   title: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const SectionLayout1 = React.forwardRef<HTMLElement, InputProps>(

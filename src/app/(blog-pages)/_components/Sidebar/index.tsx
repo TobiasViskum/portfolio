@@ -15,8 +15,16 @@ export function Sidebar() {
             href: "/viskum-app",
           },
           {
+            text: "Teoriprøve",
+            href: "/teoriproeve-practice",
+          },
+          {
             text: "Lectio",
             href: "/lectio",
+          },
+          {
+            text: "Rust-projekt",
+            href: "/programmeringssprog-i-rust",
           },
         ]}
         Icon={<Boxes />}

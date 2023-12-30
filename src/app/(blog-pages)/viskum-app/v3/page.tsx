@@ -14,7 +14,6 @@ import { NextJSIcon } from "@/svg/NextJSIcon";
 import { ReactIcon } from "@/svg/ReactIcon";
 import { TailwindIcon } from "@/svg/TailwindIcon";
 import { TypescriptIcon } from "@/svg/TypescriptIcon";
-import Link from "next/link";
 
 export default function ViskumAppProjectPage() {
   return (
@@ -99,16 +98,10 @@ export default function ViskumAppProjectPage() {
             <a target="_blank" href="https://tailwindcss.com/" className="link">
               Tailwind
             </a>
-            . Det er nu et mørkt tema
+            . UI{"'"}en blev lavet i et mørkt tema i stedet for.
           </SectionLayout2>
-          <SectionLayout2 title="Forbedret navigation" image={V3Navigation}>
-            sdfj
-          </SectionLayout2>
-          <SectionLayout2
-            title="Kan installeres (PWA)"
-            direction="reverse"
-            image={V3PwaMobile}
-          >
+
+          <SectionLayout2 title="Kan installeres (PWA)" image={V3PwaMobile}>
             En anden ny feature ved denne version er muligheden for at
             installere appen. Hvis appen installeres på mobil (iPhone) fås der
             en helt ny unik oplevelse, da der er lavet en specifik UI til netop
@@ -117,10 +110,6 @@ export default function ViskumAppProjectPage() {
             <br />
             (Installation: <i>Share → Add to Home Screen)</i>
           </SectionLayout2>
-          <SectionLayout1 title="Den sidste version (for nu)">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non,
-            dolores?
-          </SectionLayout1>
         </SectionWrapper>
       </PageContentWrapper>
     </PageWrapper>

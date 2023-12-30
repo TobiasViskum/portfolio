@@ -10,6 +10,7 @@ import V2FitnessAdd from "./v2-fitness-add.png";
 import V3Navigation from "./v3-navigation.png";
 import V3PwaMobile from "./v3-pwa-mobile.png";
 import V3Login from "./v3-login.png";
+import TheoryPractice from "./theory-practice.png";
 
 export {
   profile,
@@ -24,4 +25,5 @@ export {
   V3Navigation,
   V3PwaMobile,
   V3Login,
+  TheoryPractice,
 };
