@@ -56,7 +56,7 @@ export function SmartNavigation() {
           className="flex items-center hover:underline"
         >
           <ChevronLeft className="h-5 w-5" />
-          Tilbage
+          <p className="hidden sm:block">Tilbage</p>
         </button>
         <div className="h-3.5 w-[1px] rounded-full bg-foreground" />
       </div>

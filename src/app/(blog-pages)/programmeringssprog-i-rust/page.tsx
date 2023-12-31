@@ -51,8 +51,9 @@ export default function PorgrammingLanguageInRust() {
             ikke gennemgår. Indtil videre er jeg nået til kapitel 10: Functions.
             <br />
             <br />
-            Programmeringssproget kan ikke ret meget endnu, men man kan følge
-            med på{" "}
+            Programmeringssproget har allerede features som variabler, ternary
+            operator, logical operators, if-statements og while-loop. Man kan
+            følge med på{" "}
             <a
               href="https://github.com/TobiasViskum/viskum-language"
               target="_blank"

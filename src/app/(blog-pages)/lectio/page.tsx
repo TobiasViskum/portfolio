@@ -58,7 +58,7 @@ export default function LectioPage() {
               </a>
               )
             </span>
-            , og for det andet findes der kun en Lectio-app til mobiles, hvor UI
+            , og for det andet findes der kun en Lectio-app til mobil, hvor UI
             {"'"}en faktisk er pæn{" "}
             <span className="whitespace-nowrap">
               (
