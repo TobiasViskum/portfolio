@@ -20,7 +20,7 @@ export function getLinkInfo(path: string) {
   } else if (path == "/viskum-app/v1") {
     backInfo = {
       href: "/viskum-app",
-      text: "Tilbage",
+      text: "Viskum app",
     };
     nextInfo = {
       href: "/viskum-app/v2",
@@ -47,7 +47,7 @@ export function getLinkInfo(path: string) {
   } else if (path == "/teoriproeve-practice") {
     backInfo = {
       href: "/viskum-app/v3",
-      text: "Tilbage",
+      text: "Version 3",
     };
     nextInfo = {
       href: "/lectio",
@@ -56,11 +56,20 @@ export function getLinkInfo(path: string) {
   } else if (path == "/lectio") {
     backInfo = {
       href: "/teoriproeve-practice",
-      text: "Tilbage",
+      text: "Teoriprøve",
     };
     nextInfo = {
+      href: "/programmeringssprog-i-rust",
+      text: "Rust-projekt",
+    };
+  } else if (path == "/programmeringssprog-i-rust") {
+    backInfo = {
       href: "/lectio",
       text: "Lectio",
+    };
+    nextInfo = {
+      href: "",
+      text: "",
     };
   }
 

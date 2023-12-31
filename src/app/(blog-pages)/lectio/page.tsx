@@ -1,4 +1,13 @@
-import { previewAppV3 } from "@/assets";
+import {
+  LectioAllAssignments,
+  LectioAssignment,
+  LectioLogin,
+  LectioMessage,
+  LectioModule,
+  LectioNewestMessages,
+  LectioSchedule,
+  previewAppV3,
+} from "@/assets";
 import { H1 } from "@/components/h1";
 import { PageContentWrapper } from "@/components/page-content-wrapper";
 import { PageHeader } from "@/components/page-header";
@@ -59,13 +68,36 @@ export default function LectioPage() {
               )
             </span>
             . Derfor valgte jeg at lave en hjemmeside, der skulle være gratis at
-            tilgå og fungere som et alternativ i stedet for lectio, som man
-            kunne bruge i daglidagen.
+            tilgå og fungere som et alternativ i stedet for Lectio, som man
+            kunne bruge i dagligdagen.
           </SectionLayout1>
 
-          <SectionLayout1 title="Sådan virker det">dsf</SectionLayout1>
+          <SectionLayout1 title="Sådan virker det">
+            Der findes ikke nogen offentlig API til Lectio, og derfor er det
+            eksempelvis ikke muligt, at hente alle mulige oplysninger direkte om
+            en elev. Derfor benyttes Web Scraping, som i virkeligheden går ud
+            på, at jeg laver et request til Lectio med de rigtige cookies, og
+            som respons får jeg HTML{"'"}en fra siden jeg requestede. HTML{"'"}
+            en gennemgås og oplysningerne, der skal bruges bliver fordelt i
+            hashmaps og arrays. Hver eneste gang jeg f.eks. skal bruge et
+            billede af en elev bliver billedet konverteret til en base64 string,
+            da denne kan direkte renders som et billede.
+            <br />
+            <br />
+            På den måde har jeg altså lavet min egen API til Lectio, og jeg kan
+            nu begyndte at lave mine egne Lectio-sider. Men for at hjemmesiden
+            skal kunne fungere, skal man også benytte sig af caching, da Lectio
+            begrænser antal requests man kan sende. Derfor bruger jeg{" "}
+            <a href="https://redis.io" target="_blank" className="link">
+              Redis
+            </a>
+            , som er en database, der lever i hukommelsen, så den er super
+            hurtig at få data fra. Derfor vil man opleve, at især
+            afleveringssiderne er hurtige, da jeg også pre-cacher nogle af
+            afleveringerne.
+          </SectionLayout1>
           <SectionLayout1 title="Features">
-            Appen har nogle features, men slet ikke det samme som{" "}
+            Appen har nogle features, men ikke de samme som{" "}
             <a
               href="https://www.lectio.dk/lectio/"
               target="_blank"
@@ -75,9 +107,72 @@ export default function LectioPage() {
             </a>
             . I det følgende kan der ses de features den har.
           </SectionLayout1>
-          <SectionLayout2 title="Log ind" image={previewAppV3}>
-            sdf
+          <SectionLayout2 title="Log ind" image={LectioLogin}>
+            Først og fremmest kan man selvfølgelig logge ind på den rigtige
+            uddannelse med sit Lectio login. Sådan bliver de nødvendige
+            authentication cookies generet og gemt.
           </SectionLayout2>
+          <SectionLayout2
+            title="Skema"
+            image={LectioSchedule}
+            direction="reverse"
+          >
+            Man kan også se sit skema, som er noget af det vigtigste som elev at
+            kunne. Derudover har skemaet også en lækker UI. Man kan se ændrede
+            moduler (grønne blokke) og hvis man har et modul aflyst (røde
+            blokke).
+          </SectionLayout2>
+          <SectionLayout2 title="Modul" image={LectioModule}>
+            Man kan selvfølgelig også gå ind på hver enkelt modul, for at se
+            noter, lektier og øvrigt indhold for netop dette modul. I fremtiden
+            skal der også implementeres, så man kan lægge indhold ind på
+            elevfeedback (feedback på dagens modul).
+          </SectionLayout2>
+          <SectionLayout2
+            title="Alle afleveringer"
+            image={LectioAllAssignments}
+            direction="reverse"
+          >
+            Hjemmesiden giver også overblik over alle afleveringer man har for.
+            Jo tættere en aflevering kommer på deadlinen, jo rødere bliver
+            markøren til venstre for afleveringsnavnet. Man kan filtrere
+            afleveringerne efter: <i>alle, afleveret, venter og mangler.</i>
+          </SectionLayout2>
+          <SectionLayout2
+            title="Bestemt aflevering"
+            video="/lectio-add-group-member.mp4"
+          >
+            Derudover kan man også gå ind på hver enkelt aflevering, hvor man
+            kan se alt information om afleveringen. Men man kan også tilføje
+            medlemmer, hvis det er en gruppeaflevering, og man kan uploade sin
+            besvarelse. Man kan derfor alt det samme
+          </SectionLayout2>
+          <SectionLayout2
+            title="Nyeste beskeder"
+            image={LectioNewestMessages}
+            direction="reverse"
+          >
+            Man kan se moduler
+          </SectionLayout2>
+          <SectionLayout2 title="Læse en besked" image={LectioMessage}>
+            Man kan se moduler
+          </SectionLayout2>
+          <SectionLayout1 title="Der kommer flere features">
+            Der kommer flere features. Der er også planer om, at man skal kunne
+            få overblik over alle sine lektier på én gang, man skal kunne se sit
+            fravær, sine karakterer og lånte bøger. <br />
+            Men for nu er jeg også gået i gang med et andet sjovt projekt.
+            Nemlig mit eget programmeringssprog, hvor jeg skriver en interpreter
+            i{" "}
+            <a
+              href="https://www.rust-lang.org/"
+              target="_blank"
+              className="link"
+            >
+              Rust
+            </a>
+            .
+          </SectionLayout1>
         </SectionWrapper>
       </PageContentWrapper>
     </PageWrapper>

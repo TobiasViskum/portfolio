@@ -16,12 +16,10 @@ export default function Home() {
         />
         <div className="space-y-2">
           <H1 className="text-gradient text-3xl xs:text-4xl md:text-4xl">
-            Tobias T. Viskum
+            Tobias Tranberg Viskum
           </H1>
           <P className="max-w-md font-medium tracking-tight  [text-wrap:balance]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, illo.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod,
-            provident!
+            Dette er en hjemmeside, hvor man kan se mine projekter
           </P>
         </div>
       </div>
@@ -31,7 +29,7 @@ export default function Home() {
           <Project link="/viskum-app" text="Viskum App" />
           <Project
             link="/teoriproeve-practice"
-            text="Mini projekt: Teoriprøve pracitce"
+            text="Mini projekt: Teoriprøve practice"
           />
           <Project link="/lectio" text="Lectio Web" />
           <Project

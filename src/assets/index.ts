@@ -11,6 +11,13 @@ import V3Navigation from "./v3-navigation.png";
 import V3PwaMobile from "./v3-pwa-mobile.png";
 import V3Login from "./v3-login.png";
 import TheoryPractice from "./theory-practice.png";
+import LectioLogin from "./lectio-login.png";
+import LectioSchedule from "./lectio-schedule.png";
+import LectioModule from "./lectio-module.png";
+import LectioAllAssignments from "./lectio-all-assignments.png";
+import LectioAssignment from "./lectio-assignment.png";
+import LectioNewestMessages from "./lectio-newest-messages.png";
+import LectioMessage from "./lectio-message.png";
 
 export {
   profile,
@@ -26,4 +33,11 @@ export {
   V3PwaMobile,
   V3Login,
   TheoryPractice,
+  LectioLogin,
+  LectioSchedule,
+  LectioModule,
+  LectioAllAssignments,
+  LectioAssignment,
+  LectioNewestMessages,
+  LectioMessage,
 };

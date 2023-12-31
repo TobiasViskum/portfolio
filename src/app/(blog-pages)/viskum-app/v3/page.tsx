@@ -36,15 +36,19 @@ export default function ViskumAppProjectPage() {
 
         <SectionWrapper>
           <SectionLayout1 title="Om denne version">
-            Denne version
+            Denne version er indtil videre den sidste version af Viskum Appen.
+            Den er blevet skrevet i Typescript i stedet for Javascript og der
+            blev brugt Tailwind til at style den. Derudover blev den også lavet
+            i et nyt React Framework:
           </SectionLayout1>
           <SectionLayout1 title="Nyt framework">
             Det nye framework, som appen blev omskrevet i hedder{" "}
             <a target="_blank" href="https://nextjs.org/" className="link">
               Next.JS
             </a>
-            , der fungerer på en helt anden måde. Men for at forstå hvorfor,
-            skal det først forklares, hvordan de to første versioner virkede.
+            , der fungerer på en helt anden måde end de to første versioner. Men
+            for at forstå hvorfor, skal det først forklares, hvordan de to
+            første versioner virkede.
             <br />
             <br />I de tidligere to versioner har appen fungeret på den måde, at
             browseren modtager noget javascript og et html-dokument, hvor det
@@ -73,15 +77,17 @@ export default function ViskumAppProjectPage() {
             Måden Next.JS virker på minder mere om måden traditionelle web-apps
             virkede på, da browseren nu modtager det færdige html-dokument. Dvs.
             alle queries til databasen er allerede blevet lavet fra serversiden.
-            Det låste op for ny muligheder f.eks. et log-ind system:
+            Det låste op for nye muligheder f.eks. et log-ind system:
           </SectionLayout1>
           <SectionLayout2 title="Log-ind system" image={V3Login}>
             I denne version implementerede jeg mit eget log-ind system. Det
             fungerer sådan, at man logger ind, og derefter bærer den ens unikke
-            id med rundt i url{"'"}en. Senere gik det op for mig, at man kunne
-            bruge cookies for at opnå samme effekt, men da det hele nu afhang af
-            id
-            {"'"}et i url{"'"}en, så forblev det sådan.
+            id med rundt i url{"'"}en. Derudover bliver id{"'"}et
+            envejs-krypteret, dvs. at hvis man har det krypterede id, er det
+            umuligt at finde ud af, hvad det originale id var. Det krypterede id
+            bliver gemt i browseren og i hver request til serveren bliver det
+            sendt med, for at se om id{"'"}et i url{"'"}en nu også passer med
+            den krypterede nøgle.
             <br />
             <br />
             <>
