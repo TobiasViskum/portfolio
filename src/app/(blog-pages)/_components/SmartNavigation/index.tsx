@@ -41,6 +41,11 @@ export function SmartNavigation() {
       href: "/lectio",
       title: "Lectio web",
     });
+  } else if (path === "/programmeringssprog-i-rust") {
+    pathArray.push({
+      href: "/programmeringssprog-i-rust",
+      title: "Programmeringssprog i Rust",
+    });
   }
 
   return (

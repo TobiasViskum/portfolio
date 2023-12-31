@@ -105,62 +105,79 @@ export default function LectioPage() {
             >
               www.lectio.dk
             </a>
-            . I det følgende kan der ses de features den har.
+            . Derudover er hjemmesiden også stylet med Tailwind, da jeg efter at
+            have brugt det én gang fandt ud af, hvor meget nemmere og hurtigere
+            det var end normalt CSS. <br />I det følgende kan der ses de
+            features hjemmesiden har.
           </SectionLayout1>
           <SectionLayout2 title="Log ind" image={LectioLogin}>
             Først og fremmest kan man selvfølgelig logge ind på den rigtige
             uddannelse med sit Lectio login. Sådan bliver de nødvendige
-            authentication cookies generet og gemt.
+            authentication cookies generet og gemt, så man kan bruge resten af
+            hjemmesiden.
           </SectionLayout2>
           <SectionLayout2
             title="Skema"
             image={LectioSchedule}
             direction="reverse"
           >
-            Man kan også se sit skema, som er noget af det vigtigste som elev at
-            kunne. Derudover har skemaet også en lækker UI. Man kan se ændrede
-            moduler (grønne blokke) og hvis man har et modul aflyst (røde
-            blokke).
+            Man kan også se sit skema, hvilket er noget af det vigtigste som
+            elev at kunne. Derudover har skemaet også en lækker UI. Da mange
+            elever allerede kender{" "}
+            <a
+              href="https://lectio.plus/"
+              target="_blank"
+              className="link whitespace-nowrap"
+            >
+              Lectio+
+            </a>{" "}
+            bruges samme mønster som de gør. Derfor kan man se de normale
+            moduler (blå blokke), de ændrede moduler (grønne blokke) og de
+            aflyste moduler (røde blokke).
           </SectionLayout2>
           <SectionLayout2 title="Modul" image={LectioModule}>
             Man kan selvfølgelig også gå ind på hver enkelt modul, for at se
             noter, lektier og øvrigt indhold for netop dette modul. I fremtiden
             skal der også implementeres, så man kan lægge indhold ind på
-            elevfeedback (feedback på dagens modul).
+            elevfeedback (feedback for dagens modul).
           </SectionLayout2>
           <SectionLayout2
-            title="Alle afleveringer"
+            title="Afleveringer"
             image={LectioAllAssignments}
             direction="reverse"
           >
             Hjemmesiden giver også overblik over alle afleveringer man har for.
-            Jo tættere en aflevering kommer på deadlinen, jo rødere bliver
+            Jo tættere en aflevering kommer på deadline, jo rødere bliver
             markøren til venstre for afleveringsnavnet. Man kan filtrere
             afleveringerne efter: <i>alle, afleveret, venter og mangler.</i>
           </SectionLayout2>
           <SectionLayout2
-            title="Bestemt aflevering"
+            title="Aflever herfra"
             video="/lectio-add-group-member.mp4"
           >
             Derudover kan man også gå ind på hver enkelt aflevering, hvor man
-            kan se alt information om afleveringen. Men man kan også tilføje
+            kan se alt information om afleveringen. Her kan man også tilføje
             medlemmer, hvis det er en gruppeaflevering, og man kan uploade sin
-            besvarelse. Man kan derfor alt det samme
+            besvarelse. Derfor kan man faktisk det samme som på Lectio.
           </SectionLayout2>
           <SectionLayout2
-            title="Nyeste beskeder"
+            title="Beskeder"
             image={LectioNewestMessages}
             direction="reverse"
           >
-            Man kan se moduler
+            Man kan også se alle beskederne inde på hjemmesiden på en
+            overskuelig måde. Man kan se de nyeste beskeder, men også ens
+            favoritter og sendte beskeder.
           </SectionLayout2>
-          <SectionLayout2 title="Læse en besked" image={LectioMessage}>
-            Man kan se moduler
+          <SectionLayout2 title="Beskedtråde" image={LectioMessage}>
+            Da man kan se beskeder, kan man også gå ind og se hver enkelt
+            beskedtråd. For nu kan man kun læse dem, men i fremtiden skal man
+            også kunne sende en besked - både i en beskedtråd og en helt ny en.
           </SectionLayout2>
           <SectionLayout1 title="Der kommer flere features">
-            Der kommer flere features. Der er også planer om, at man skal kunne
-            få overblik over alle sine lektier på én gang, man skal kunne se sit
-            fravær, sine karakterer og lånte bøger. <br />
+            Der kommer flere features. Nogle af de features er, at man skal
+            kunne få overblik over alle sine lektier på én gang, man skal kunne
+            se sit fravær, sine karakterer og lånte bøger. <br />
             Men for nu er jeg også gået i gang med et andet sjovt projekt.
             Nemlig mit eget programmeringssprog, hvor jeg skriver en interpreter
             i{" "}
