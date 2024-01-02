@@ -10,6 +10,7 @@ export interface InputProps extends React.HTMLAttributes<HTMLDivElement> {
   externalHref?: string;
   externalText?: string;
   gitHref?: string;
+  guestLogin?: string;
 }
 
 const PageInfo = React.forwardRef<HTMLDivElement, InputProps>(
@@ -22,6 +23,7 @@ const PageInfo = React.forwardRef<HTMLDivElement, InputProps>(
       externalText,
       gitHref,
       children,
+      guestLogin,
       ...props
     },
     ref,
@@ -57,6 +59,14 @@ const PageInfo = React.forwardRef<HTMLDivElement, InputProps>(
             </Link>
           </div>
         )}
+        {guestLogin ? (
+          <div className="opacity-80">
+            Guest-login:{" "}
+            <b>
+              <i>{guestLogin}</i>
+            </b>
+          </div>
+        ) : null}
       </div>
     );
   },

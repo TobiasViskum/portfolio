@@ -32,6 +32,7 @@ export default function ViskumAppProjectPage() {
           externalHref={EXTERNAL_HREF_VISKUM_APP_V3}
           externalText={EXTERNAL_TEXT_VISKUM_APP_V3}
           gitHref={GIT_HREF_VISKUM_APP_V3}
+          guestLogin="guest123"
         />
 
         <SectionWrapper>
@@ -91,7 +92,10 @@ export default function ViskumAppProjectPage() {
             <br />
             <br />
             <>
-              Email og password: <i>guest123</i>
+              Email og password:{" "}
+              <i>
+                <b>guest123</b>
+              </i>
             </>
           </SectionLayout2>
           <SectionLayout2

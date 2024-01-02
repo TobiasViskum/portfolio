@@ -42,6 +42,7 @@ export default function LectioPage() {
           externalHref={EXTERNAL_HREF_LECTIO}
           externalText={EXTERNAL_TEXT_LECTIO}
           gitHref={GIT_HREF_LECTIO_VISKUM}
+          guestLogin="guest123"
         />
         <SectionWrapper>
           <SectionLayout1 title="Inspiration">
@@ -115,6 +116,12 @@ export default function LectioPage() {
             uddannelse med sit Lectio login. Sådan bliver de nødvendige
             authentication cookies generet og gemt, så man kan bruge resten af
             hjemmesiden.
+            <br />
+            <br />
+            Email og password:{" "}
+            <b>
+              <i>guest123</i>
+            </b>
           </SectionLayout2>
           <SectionLayout2
             title="Skema"
