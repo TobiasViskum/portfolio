@@ -52,8 +52,8 @@ export default function PorgrammingLanguageInRust() {
             <br />
             <br />
             Programmeringssproget har allerede features som variabler, ternary
-            operator, logical operators, if-statements og while-loop. Man kan
-            følge med på{" "}
+            operator, logical operators, if-statements, while-loops og
+            funktioner. Man kan følge med på{" "}
             <a
               href="https://github.com/TobiasViskum/viskum-language"
               target="_blank"
